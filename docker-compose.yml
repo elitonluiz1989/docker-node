@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+    exemple.node:
+        image: elitonluiz1989/node
+
+        container_name: exemple.node
+
+        ports: 
+            - "8080:8080"
+
+        volumes: 
+            - ./exemple/:/var/www/html/
+
+        working_dir: /var/www/html/
