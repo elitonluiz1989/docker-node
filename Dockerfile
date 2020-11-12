@@ -1,13 +1,16 @@
 FROM node:alpine
 
 LABEL maintainer="elitonluiz1989@gmail.com"
-LABEL version="1.0.0"
+LABEL version="1.0.1"
 
 RUN apk update; \
     apk upgrade;
 
 RUN apk add --update --no-cache \
     curl \
+    make \
+    g++ \
+    python2 \
     wget;
 
 RUN apk add --no-cache --virtual .yarn-deps curl gnupg && \
